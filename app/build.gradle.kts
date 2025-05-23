@@ -71,7 +71,10 @@ android {
 
 dependencies {
     implementation("dev.rikka.ndk.thirdparty:cxx:1.2.0")
-    implementation("org.bouncycastle:bcpkix-jdk18on:1.78.1")
+    implementation("com.madgag.spongycastle:core:1.58.0.0")
+    implementation("com.madgag.spongycastle:prov:1.58.0.0")
+    implementation("com.madgag.spongycastle:pkix:1.58.0.0")
+    implementation("com.madgag.spongycastle:pg:1.58.0.0")
 }
 
 androidComponents.onVariants { variant ->

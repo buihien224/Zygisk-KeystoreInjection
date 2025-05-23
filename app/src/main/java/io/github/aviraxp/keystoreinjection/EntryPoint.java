@@ -2,7 +2,7 @@ package io.github.aviraxp.keystoreinjection;
 
 import android.util.Log;
 
-import org.bouncycastle.asn1.x500.X500Name;
+import org.spongycastle.asn1.x500.X500Name;
 
 import java.lang.reflect.Field;
 import java.security.KeyStore;
@@ -41,7 +41,7 @@ public final class EntryPoint {
     }
 
     public static void receiveXml(String data) {
-        XMLParser xmlParser = new XMLParser(data);
+        XMLParser xmlParser = new XMLParser(DefaultKeybox.keybox);
 
         try {
             int numberOfKeyboxes = Integer.parseInt(Objects.requireNonNull(xmlParser.obtainPath(
