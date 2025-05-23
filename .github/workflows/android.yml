@@ -1,6 +1,7 @@
 name: Android CI
 
 on:
+  workflow_dispatch:  # Thêm dòng này để hỗ trợ trigger thủ công
   push:
     branches: [ "main" ]
   pull_request:
