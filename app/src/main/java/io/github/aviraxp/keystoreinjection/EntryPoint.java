@@ -41,7 +41,7 @@ public final class EntryPoint {
     }
 
     public static void receiveXml(String data) {
-        XMLParser xmlParser = new XMLParser(DefaultKeybox.keybox);
+        XMLParser xmlParser = new XMLParser(data);
 
         try {
             int numberOfKeyboxes = Integer.parseInt(Objects.requireNonNull(xmlParser.obtainPath(
